@@ -1,0 +1,47 @@
+.heading-container{
+    text-align: center;
+    padding-top: 1rem;
+}
+.heading-title{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: auto;;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+.button-group{
+    display: flex;
+    gap: 1rem;
+}
+.toggle-button{
+    padding: 0.75rem;
+    width: 5rem;
+    font-size: 1.125rem;
+    border: 2px solid #6b5b95;
+    background-color: #e0e0e0;
+    font-weight: 600;
+    border-radius: 0.375;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.toggle-button:hover{
+    background-color: #6b5b95;
+    color: white;
+}
+.add-note-icon{
+    float: right;
+    padding-right: 1rem;
+    margin-top: 1.5rem;
+}
+.icon{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.icon:hover{
+    color: #6b5b95;
+}

@@ -1,0 +1,55 @@
+.modal.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    width: 600px;
+    max-width: 100%;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-close-icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.875rem;
+    color: #f44336;
+    cursor: pointer;
+}
+.modal-title{
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.modal-date-info{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.modal-date-icon{
+    font-size: 1.875rem;
+    color: #f44336;
+}
+.date-details{
+    margin-top: 0.5rem;
+}
+@media(max-width: 767px){
+    .modal-content{
+        width: 90%;
+    }
+}
