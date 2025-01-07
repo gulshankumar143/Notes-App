@@ -36,17 +36,18 @@ The Notes App is a web application designed to help users create, manage, and or
 #### 1. Navigate to the project directory:
 cd Notes-App
 #### 2. Install dependencies for the backend:
-cd backend
+cd backend<br>
 npm install
 #### 3. Install dependencies for the frontend:
-cd ../frontend
+cd ../frontend<br>
 npm install
 
 ## Usage
 
 #### 1. Start the backend server:
-Start the backend server:
+cd backend<br>
+npm start
 #### 2. Start the frontend development server:
-cd ../frontend
+cd ../frontend<br>
 npm start
 #### 3. Open your browser and navigate to http://localhost:3000 to use the application.
