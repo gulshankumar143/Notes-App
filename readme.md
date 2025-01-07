@@ -34,7 +34,7 @@ The Notes App is a web application designed to help users create, manage, and or
 ## Installation
 
 #### 1. Navigate to the project directory:
-cd Notes_App
+cd Notes-App
 #### 2. Install dependencies for the backend:
 cd backend
 npm install
