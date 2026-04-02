@@ -1,20 +1,16 @@
 
 import './App.css'
 import Heading from './Components/Heading.jsx';
-import { BrowserRouter as Router } from 'react-router-dom';
-// import Spinner from './Components/Spinner.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <Router>
-      <div>
-        <Heading />
-
-      {/* <Spinner/>   */}
-      </div>
+      <Routes>
+        <Route path="/*" element={<Heading />} />
+      </Routes>
     </Router>
-   
   )
 }
 

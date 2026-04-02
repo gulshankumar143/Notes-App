@@ -66,25 +66,23 @@ const NotesCard = () => {
                         <div className="note-card-info">
                             <span className='note-card-label'>Date :</span>{new Date(note.createdAt).toDateString()}
                         </div>
-                        <div className="note-card-actions">
-                            <FaNoteSticky className='note-action-icon' onClick={()=>openNotesModal(index)}/>
-                                <Link to={`/notes/edit/${note._id}`}>
-                                    <MdEdit className='note-action-icon edit-icon'/>
-
-                                </Link>
-                                <Link to={`/notes/delete/${note._id}`}>
-                                    <MdDelete className='note-action-icon delete-icon'/>
-
-                                </Link>
-                    <CiCalendarDate className='note-action-icon date-icon'onClick={()=>openDatesModal(index)}/>
-                        </div>
-                        {notesModal && selectedIndex === index (
-                            <NotesModal onClose={closeNotesModal} note={note}/>
-                        )}
-                        {datesModal && selectedIndex === index (
-                            <DatesModal onClose={closeDatesModal} note={note}/>
-                        )}
+                                        <div className="note-card-actions">
+                        <FaNoteSticky className='note-action-icon' onClick={()=>openNotesModal(index)}/>
+                        <Link to={`/notes/edit/${note._id}`}>
+                            <MdEdit className='note-action-icon edit-icon'/>
+                        </Link>
+                        <Link to={`/notes/delete/${note._id}`}>
+                            <MdDelete className='note-action-icon delete-icon'/>
+                        </Link>
+                        <CiCalendarDate className='note-action-icon date-icon' onClick={()=>openDatesModal(index)}/>
                     </div>
+                    {notesModal && selectedIndex === index && (
+                        <NotesModal onClose={closeNotesModal} note={note}/>
+                    )}
+                    {datesModal && selectedIndex === index && (
+                        <DatesModal onClose={closeDatesModal} note={note}/>
+                    )}
+                </div>
 
                 ))}
 

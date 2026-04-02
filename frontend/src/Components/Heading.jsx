@@ -1,14 +1,13 @@
 
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import {FaSquarePlus} from 'react-icons/fa6';
 import {Link} from 'react-router-dom'
 import NotesTable from './NotesTable'
 import NotesCard from './NotesCard'
 import '../Components css/Heading.css'
 const Heading = () => {
-    const [tableNotes,setTableNotes] =useState(false);
-    const [cardNotes,setCardNotes] =useState(false);
+    const [tableNotes,setTableNotes] = useState(false);
+    const [cardNotes,setCardNotes] = useState(true);
     return (
 <div className="heading-container">
     <h2 className='heading-title'>Advanced Note taking application</h2>
@@ -16,7 +15,7 @@ const Heading = () => {
     <div className="button-group">
         <button
         className='toggle-button'
-        oneClick={()=>{
+        onClick={()=>{
             setTableNotes(true);
             setCardNotes(false);
         }}
@@ -25,7 +24,7 @@ const Heading = () => {
         </button>
         <button
         className='toggle-button'
-        oneClick={()=>{
+        onClick={()=>{
             setTableNotes(false);
             setCardNotes(true);
         }}
@@ -40,7 +39,7 @@ const Heading = () => {
         </Link>
         
     </div>
-    {tableNotes ?<NotesTable/> : <NotesCard/>}
+    {tableNotes ? <NotesTable/> : <NotesCard/>}
 </div>
 
     )

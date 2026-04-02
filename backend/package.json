@@ -14,12 +14,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongodb": "^6.12.0",
-    "mongoose": "^8.9.2",
-    "nn": "^0.0.0"
+    "mongoose": "^8.9.2"
   },
   "description": "backend notes app",
   "devDependencies": {
-    "hint": "^7.1.13"
+    "nodemon": "^3.0.1"
   }
 }

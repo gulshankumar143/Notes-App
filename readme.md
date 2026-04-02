@@ -2,25 +2,24 @@
 
 ## Description
 
-The Notes App is a web application designed to help users create, manage, and organize their notes. It is built using a modern tech stack, including React for the frontend and Node.js with Express for the backend. The application supports CRUD (Create, Read, Update, Delete) operations for notes and provides a user-friendly interface for managing them.
+The Notes App is a full-stack note management application built with React for the frontend and Node.js/Express for the backend. It enables users to create, read, update, and delete notes, and stores data in MongoDB.
 
 ## Features
 
-- Create new notes with a title, content, and status.
-- View a list of all notes.
-- Edit existing notes.
-- Delete notes.
-- View note creation dates.
-- Responsive design for mobile and desktop use.
+- Create notes with title, content, and status.
+- View all notes in card or table view.
+- Edit and delete notes.
+- View note creation date details.
+- Responsive UI with modal support.
 
 ## Tech Stack
 
 ### Frontend
 
 - React
-- Axios
+- Vite
 - React Router
-- CSS Modules
+- Axios
 - React Icons
 
 ### Backend
@@ -31,23 +30,96 @@ The Notes App is a web application designed to help users create, manage, and or
 - Mongoose
 - dotenv
 
-## Installation
+## Prerequisites
 
-#### 1. Navigate to the project directory:
+- Node.js installed
+- npm installed
+- MongoDB database available
+
+## Setup
+
+### 1. Clone the project
+
+```bash
+git clone https://github.com/gulshankumar143/Notes-App.git
 cd Notes-App
-#### 2. Install dependencies for the backend:
-cd backend<br>
-npm install
-#### 3. Install dependencies for the frontend:
-cd ../frontend<br>
-npm install
+```
 
-## Usage
+### 2. Configure backend environment variables
 
-#### 1. Start the backend server:
-cd backend<br>
-npm start
-#### 2. Start the frontend development server:
-cd ../frontend<br>
-npm start
-#### 3. Open your browser and navigate to http://localhost:3000 to use the application.
+Create a `.env` file inside `backend/` with the following values:
+
+```env
+MONGO_URI=<your-mongodb-connection-string>
+PORT=5000
+FRONTEND_URL=http://localhost:5173
+```
+
+### 3. Install dependencies
+
+Install backend dependencies:
+
+```bash
+cd backend
+npm install
+```
+
+Install frontend dependencies:
+
+```bash
+cd ../frontend
+npm install
+```
+
+## Running the app
+
+### Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+The backend API will run at:
+
+```text
+http://localhost:5000
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+By default, Vite will serve the frontend at:
+
+```text
+http://localhost:5173
+```
+
+## Notes
+
+- Make sure the backend is running before using the frontend application.
+- The frontend expects the API at `http://localhost:5000/api/notes`.
+- If you need a different frontend port, update `FRONTEND_URL` in `backend/.env`.
+
+## Scripts
+
+### Backend
+
+- `npm run dev` — start backend with nodemon
+- `npm start` — start backend with Node
+
+### Frontend
+
+- `npm run dev` — start Vite development server
+- `npm run build` — build frontend for production
+- `npm run preview` — preview the production build
+
+## Troubleshooting
+
+- If the frontend fails to load, verify `npm install` completed successfully in `frontend/`.
+- If the backend fails to connect, verify `MONGO_URI` in `backend/.env`.
+- Use browser console and terminal logs to check API request errors.
