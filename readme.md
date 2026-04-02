@@ -50,7 +50,6 @@ cd Notes-App
 Create a `.env` file inside `backend/` with the following values:
 
 ```env
-MONGO_URI=<your-mongodb-connection-string>
 PORT=5000
 FRONTEND_URL=http://localhost:5173
 ```
